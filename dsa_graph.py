@@ -151,7 +151,7 @@ def genetate_dsa_graph():
     graph.add_edge("Question Solver", END)
 
     # 4. Compile the graph
-    complete_dsa_agent = graph.compile()
+    complete_dsa_agent = graph.compile(interrupt_before=['Human Review'])
 
     return complete_dsa_agent
 
