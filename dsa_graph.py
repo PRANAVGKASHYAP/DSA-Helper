@@ -110,11 +110,10 @@ def router(state: State):
 
     feedback = state.get("human_feedback", "")
     
-    # CHECK IF THE FEEDBACK IS POSITIVE OR NOT 
-    if feedback == "yes":
-        return "solver"
-    elif feedback == "no":
+    if feedback == "no":
         return "question_crafter"
+    
+    return "solver"
     
 from langgraph.graph import START , END , StateGraph
 
@@ -135,11 +134,11 @@ def genetate_dsa_graph():
     # 3. Define the edges
     graph.set_entry_point("Researcher")
     graph.add_edge("Researcher", "Question Generator")
-    graph.add_edge("Question Generator", "Human Review")
+    #graph.add_edge("Question Generator", "Human Review")
 
     # The conditional edge now only chooses between solving or regenerating
     graph.add_conditional_edges(
-        "Human Review",
+        "Question Generator",
         router,
         {
             "solver": "Question Solver",
@@ -151,7 +150,7 @@ def genetate_dsa_graph():
     graph.add_edge("Question Solver", END)
 
     # 4. Compile the graph
-    complete_dsa_agent = graph.compile()
+    complete_dsa_agent = graph.compile(interrupt_after=["Question Generator"])
 
     return complete_dsa_agent
 

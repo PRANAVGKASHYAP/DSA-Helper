@@ -61,8 +61,6 @@ class QuestionGenerator:
                     "and evaluate a candidate’s raw reasoning, abstraction, and adaptability.\n\n"
 
                     "**CRITICAL OUTPUT REQUIREMENTS:**\n"
-                    "- You MUST produce output **strictly matching the provided Pydantic schema (CodeQuestion)**.\n"
-                    "- All fields must be complete, detailed, and precise.\n"
                     "- Test cases must be diverse, non-trivial, and include edge cases.\n\n"
 
                     "**DESIGN GUIDELINES:**\n"
