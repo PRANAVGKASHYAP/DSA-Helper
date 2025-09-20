@@ -47,7 +47,7 @@ class QuestionGenerator:
 
     structured_llm = llm.with_structured_output(CodeQuestion)
 
-    def generate_question(self, json_string_data):
+    def generate_question(self, json_string_data , prompt_enhancer=None):
         # in this function define a prompt and then call the gemini llm 
 
         from langchain_core.prompts import ChatPromptTemplate
@@ -71,6 +71,7 @@ class QuestionGenerator:
                 "user",
                 (
                     "Here is the JSON knowledge packet:\n\n```json\n{json_data}\n```\n\n"
+                    "{prompt_enhancer}"
                     "Generate the coding question now."
                 )
             ),
@@ -80,7 +81,8 @@ class QuestionGenerator:
 
         gemini_response = chain.invoke(
         {
-            "json_data": json_string_data
+            "json_data": json_string_data,
+            "prompt_enhancer": prompt_enhancer if prompt_enhancer else ""
         }
         )
 
