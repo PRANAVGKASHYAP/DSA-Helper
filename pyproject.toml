@@ -1,0 +1,20 @@
+[project]
+name = "websearch"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "beautifulsoup4>=4.13.4",
+    "google-genai>=1.31.0",
+    "grandalf>=0.8",
+    "langchain>=0.3.27",
+    "langchain-community>=0.3.27",
+    "langchain-google-genai>=2.1.9",
+    "langchain-ollama>=0.3.7",
+    "langgraph>=0.6.6",
+    "matplotlib>=3.10.5",
+    "python-dotenv>=1.1.1",
+    "tavily-python>=0.7.11",
+    "transformers>=4.55.4",
+]

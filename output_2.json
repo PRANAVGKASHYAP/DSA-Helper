@@ -1,0 +1,52 @@
+{
+    "title": "Binary Search: Concepts, Examples, and Applications",
+    "description": "A comprehensive guide to binary search, including its efficiency, versatility, and real-world applications.",
+    "concepts": [
+        {
+            "name": "Divide-and-Conquer Algorithm",
+            "description": "Efficiently finds an element in a sorted list by repeatedly halving the search interval."
+        },
+        {
+            "name": "Time Complexity",
+            "description": "O(log n) due to the divide-and-conquer approach, significantly outperforming brute force O(n) search."
+        },
+        {
+            "name": "Space Complexity",
+            "description": "O(1) for iterative implementations and O(log n) for recursive ones due to the call stack."
+        }
+    ],
+    "examples": [
+        {
+            "name": "Search in Rotated Sorted Array (LeetCode 33)",
+            "description": "Determining which half of the array is sorted and then deciding where to continue the search."
+        },
+        {
+            "name": "Split Array Largest Sum (LeetCode 410)",
+            "description": "Applying binary search to find the largest sum that allows splitting the array into k or fewer subarrays."
+        }
+    ],
+    "applications": [
+        {
+            "name": "Databases",
+            "description": "Optimizing query performance by searching indexed records, like in B-trees."
+        },
+        {
+            "name": "Gaming",
+            "description": "Fine-tuning parameters such as rendering distances or collision detection thresholds."
+        },
+        {
+            "name": "Statistics",
+            "description": "Locating values within sorted probability distributions for simulations like Monte Carlo, to speed up generating random samples."
+        },
+        {
+            "name": "Machine Learning",
+            "description": "Optimizing thresholds for classification problems, such as in spam filters, to maximize metrics like accuracy or precision."
+        }
+    ],
+    "code_samples": [
+        {
+            "language": "C#",
+            "description": "Iterative and recursive binary search implementations with integer overflow prevention using `mid = left + (right - left) / 2`."
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+[
+    {
+    "query": "key concepts of binary search algorithm , and trending coding questions based on it ",
+    "follow_up_questions": null,
+    "answer": "Binary search is a fundamental divide-and-conquer algorithm that efficiently locates a target element in a sorted array by repeatedly dividing the search space in half, achieving O(log n) time complexity compared to linear search's O(n). Key concepts include the requirement for sorted data, maintaining three pointers (left, right, and middle), comparing the target with the middle element to determine which half to search next, and understanding that each iteration eliminates half of the remaining elements. Trending coding questions frequently test variations such as finding the first or last occurrence of a duplicate element, searching in rotated sorted arrays, finding peak elements, implementing square root calculations, locating insertion positions for maintaining sorted order, finding minimum elements in rotated arrays, and solving problems like \"Search in 2D Matrix\" where binary search principles apply to matrix traversal. Advanced applications include finding the median of two sorted arrays, determining the smallest element greater than a target, solving capacity allocation problems like \"Split Array Largest Sum,\" and implementing binary search on answer techniques for optimization problems where you search for the optimal value within a range of possible solutions.",
+    "images": [],
+    "results": [
+        {
+        "url": "https://www.geeksforgeeks.org/dsa/most-asked-binary-search-interview-questions/",
+        "title": "Most Asked Binary Search Interview Questions - GeeksforGeeks",
+        "content": "Searching is a fundamental concept in computer science, involving the process of finding a specific element in a collection of data. Efficient searching techniques are crucial for optimizing performance, especially when dealing with large datasets. Top Coding Interview Questions on SearchingThe foll\n\n3 min readTop 50 Binary Search Tree Coding Problems for Interviews",
+        "score": 0.57894874,
+        "raw_content": null
+        }
+    ],
+    "response_time": 10.21,
+    "request_id": "b92374c5-9781-42d3-9062-df7439a2c89e"
+    }
+]

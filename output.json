@@ -1,0 +1,76 @@
+{
+  "example_set": [
+    {
+      "id": "1",
+      "title": "Binary Search in Array",
+      "description": "The Stack Overflow question 'Binary Search in Array' provides a comprehensive discussion and multiple implementations of the binary search algorithm.",
+      "algorithm_steps": [
+        {
+          "step": 1,
+          "description": "Initialize `low` to the first index (0) and `high` to the last index (`N-1`)."
+        },
+        {
+          "step": 2,
+          "description": "While `low` is less than or equal to `high`: a. Calculate `mid`. b. Compare the element at `arr[mid]` with the `target` value. c. If `arr[mid]` equals `target`, return `mid` (element found). d. If `arr[mid]` is greater than `target`, the target must be in the left half, so update `high = mid - 1`. e. If `arr[mid]` is less than `target`, the target must be in the right half, so update `low = mid + 1`."
+        }
+      ],
+      "coding_implementations": [
+        {
+          "language": "Python",
+          "description": "This method uses a `while` loop to repeatedly adjust `low` and `high` pointers until the target is found or the search space is exhausted. It generally has a space complexity of O(1) as it does not use additional call stack space."
+        },
+        {
+          "language": "JavaScript (ES6)",
+          "description": "This method involves a function calling itself with updated `low` and `high` parameters, effectively narrowing the search space in each call. While elegant, it typically has a space complexity of O(log N) due to the function call stack."
+        }
+      ],
+      "specialized_implementations": [
+        {
+          "description": "Some implementations show how to find *all* occurrences of a target element, not just the first one. This involves two binary searches: one to find the `startIndex` (by continuing to search left even after a match) and another to find the `endIndex` (by continuing to search right)."
+        }
+      ],
+      "benefits": [
+        {
+          "description": "Reduces search time significantly by eliminating half of the remaining search space in each step."
+        },
+        {
+          "description": "Avoids searching the entire array."
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Binary Search",
+      "description": "The Stack Overflow question 'Binary Search' provides a comprehensive discussion and multiple implementations of the binary search algorithm.",
+      "algorithm_steps": [
+        {
+          "step": 1,
+          "description": "Initialize `low` to the first index (0) and `high` to the last index (`N-1`)."
+        },
+        {
+          "step": 2,
+          "description": "While `low` is less than or equal to `high`: a. Calculate `mid`. b. Compare the element at `arr[mid]` with the `target` value. c. If `arr[mid]` equals `target`, return `mid` (element found). d. If `arr[mid]` is greater than `target`, the target must be in the left half, so update `high = mid - 1`. e. If `arr[mid]` is less than `target`, the target must be in the right half, so update `low = mid + 1`."
+        }
+      ],
+      "coding_implementations": [
+        {
+          "language": "Java",
+          "description": "This method uses a `while` loop to repeatedly adjust `low` and `high` pointers until the target is found or the search space is exhausted. It generally has a space complexity of O(1) as it does not use additional call stack space."
+        }
+      ],
+      "specialized_implementations": [
+        {
+          "description": "Some implementations show how to find *all* occurrences of a target element, not just the first one. This involves two binary searches: one to find the `startIndex` (by continuing to search left even after a match) and another to find the `endIndex` (by continuing to search right)."
+        }
+      ],
+      "benefits": [
+        {
+          "description": "Reduces search time significantly by eliminating half of the remaining search space in each step."
+        },
+        {
+          "description": "Avoids searching the entire array."
+        }
+      ]
+    }
+  ]
+}

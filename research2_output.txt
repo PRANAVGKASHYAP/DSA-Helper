@@ -1,0 +1,31 @@
+{
+  "title": "Comprehensive Guide to Binary Search",
+  "description": "Binary search is a fast and efficient algorithm that operates on the principle of 'divide and conquer' with a run-time complexity of O(log n) that requires input data collection to be sorted.",
+  "algorithm_steps": [
+    {
+      "step": 1,
+      "description": "The algorithm begins by comparing the target value to the middle element of the array. If they match, the search is successful."
+    },
+    {
+      "step": 2,
+      "description": "If the target is less than the middle element, the search continues in the lower half of the array; otherwise, it proceeds in the upper half."
+    }
+  ],
+  "coding_implementations": [
+    {
+      "language": "C",
+      "description": "The article provides a pseudocode and implementation examples in C, C++, Java, and Python.",
+      "code": ""
+    },
+    {
+      "language": "JavaScript",
+      "description": "",
+      "code": ""
+    }
+  ],
+  "specialized_implementations": [],
+  "benefits": [
+    "Efficiency: O(log n) time complexity ensures fast searches.",
+    "Simplicity: The algorithm's straightforward implementation requires only basic programming constructs."
+  ]
+}
