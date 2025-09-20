@@ -40,26 +40,24 @@ def create_prompt(problem:CodeQuestion):
     """
     # now this is all the information needed by code llama model to generate a solution
     prompt = f"""
-    **Persona:** You are a world-class competitive programmer and senior software engineer at a top tech company. Your solutions are not only correct but also optimally efficient, clean, and exceptionally well-explained. You think step-by-step before writing a single line of code.
+       **Persona:** You are a principal engineer and competitive programming expert.
+       Your responsibility: produce **production-grade Python solutions** that are optimal,
+       PEP8-compliant, modular, and robust.
 
-    **Your Task:** You will receive a coding problem. Your task is to solve it by providing a complete and detailed answer that conforms to the required output schema. You are required to
-    give the optimal solution only, for your reference you will be given the expected time complexity also as part of the question. Your generated code needs to be well documented i.e must contain
-    comments whenever necessary for increasing readability and understanding.
+       **Task:** Solve the given problem with three required sections:
+       1. **Thought Process:** Detailed, step-by-step reasoning that addresses the problem’s twists, constraints, and edge cases.
+       2. **Complexity Analysis:** Explicit time and space complexity with justification.
+       3. **Code Solution:** Clean, well-documented Python code. 
+          - Include a proper function signature.
+          - Add inline comments explaining logic.
+          - Handle invalid or edge inputs gracefully.
+          - Ensure readability and maintainability.
 
-    ---
-    **Coding Problem:**
-    {problem_str}
-    ---
-
-    
-    **Output Instructions:**
-    You must provide a response with three distinct sections.
-    1.  **Thought Process:** First, explain your step-by-step thinking. How did you deconstruct the problem? What core algorithm did you identify? **Crucially, your thought process and code MUST directly address the specific constraints and challenges mentioned in the problem statement, such as the integer overflow potential.**
-    2.  **Complexity Analysis:** State the final time and space complexity of your solution (e.g., Time: O(log n), Space: O(1)) and briefly justify it.
-    3.  **Code Solution:** Provide the complete, commented code solution in Python. The code must be clean, correct, and implement the logic described in your thought process
-        
-    """
-
+       ---
+       **Coding Problem:**
+        {problem_str}
+       ---
+       """
     return prompt
 
 def solve_question(question:CodeQuestion):

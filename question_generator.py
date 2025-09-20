@@ -56,15 +56,30 @@ class QuestionGenerator:
             (
                 "system",
                 (
-                    "You are a principal engineer at a top tech company, known for creating challenging and novel interview problems that test a candidate's deep understanding, not just their memory of standard algorithms."
-                    "Your response MUST conform to the provided tool schema.\n\n"
-                    "**Your Goal: Generate a TRICKY and DIFFICULT coding problem.**\n\n"
-                    "**Key Instructions:**\n"
-                    "1. **Obfuscate the Core Concept:** Invent a compelling, real-world narrative that hides the underlying algorithm. The candidate should have to analyze the problem to uncover the required technique; it should NOT be obvious.\n"
-                    "2. **Center the Problem on a 'Twist':** You MUST select one of the `key-technical-considerations` from the JSON (e.g., handling duplicates, midpoint overflow, rotated arrays) and make it the central challenge of your problem.\n"
-                    "3. **Require Adaptation:** The standard algorithm should not solve the problem directly. The candidate must be required to adapt the algorithm to fit the narrative's unique constraints or goals.\n"
-                    "4. **Avoid Trivial Scenarios:** Do not create a problem that is a simple textbook implementation of the algorithm. Create a scenario that feels new and requires genuine thought.\n"
-                    "5. **Do Not Name the Algorithm:** Under no circumstances should you mention the name of the algorithm (e.g., 'Binary Search') in the problem description."
+                    "You are a world-class principal engineer and interview architect at a top-tier tech company. "
+                    "Your responsibility is to design **elite-level, novel coding interview problems** that probe beyond memorization "
+                    "and evaluate a candidate’s raw reasoning, abstraction, and adaptability.\n\n"
+
+                    "**CRITICAL OUTPUT REQUIREMENTS:**\n"
+                    "- You MUST produce output **strictly matching the provided Pydantic schema (CodeQuestion)**.\n"
+                    "- All fields must be complete, detailed, and precise.\n"
+                    "- Test cases must be diverse, non-trivial, and include edge cases.\n\n"
+
+                    "**DESIGN GUIDELINES:**\n"
+                    "1. **Narrative Obfuscation:** Wrap the core algorithmic idea in a real-world, creative scenario. "
+                    "The underlying technique should be *hidden* and only discoverable through deep reasoning.\n"
+                    "2. **Central Technical Twist:** Choose one of the `key-technical-considerations` in the JSON knowledge packet "
+                    "and make it the heart of the problem. The twist should force the candidate to rethink or adapt a known technique.\n"
+                    "3. **Avoid Obviousness:** Do NOT state or hint at the underlying algorithm’s name. "
+                    "The challenge must feel fresh and original, never a textbook-style exercise.\n"
+                    "4. **Enforce Adaptation:** The candidate must reconcile conflicting constraints, optimize within unusual rules, "
+                    "or resolve edge cases that break standard implementations.\n"
+                    "5. **No Trivial Patterns:** Reject overly common problems (e.g., Fibonacci, factorial, standard sorting). "
+                    "Problems should feel unique, technically demanding, and realistic for high-stakes interviews.\n"
+                    "6. **Complexity Awareness:** Clearly state the optimal expected time complexity and ensure "
+                    "constraints guide the candidate towards that.\n"
+                    "7. **Professional Polish:** Titles should sound intriguing but professional. "
+                    "Descriptions must be written in precise, technical, interview-grade English."
                 )
             ),
             (
@@ -72,10 +87,11 @@ class QuestionGenerator:
                 (
                     "Here is the JSON knowledge packet:\n\n```json\n{json_data}\n```\n\n"
                     "{prompt_enhancer}"
-                    "Generate the coding question now."
+                    "Now generate one **unique, technically sophisticated coding problem** following the above instructions."
                 )
             ),
         ])
+
 
         chain = prompt | self.structured_llm
 
